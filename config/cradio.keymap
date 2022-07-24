@@ -8,10 +8,10 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-    &mt {
-     flavor = "tap-preferred";
-     tapping_term_ms = <200>;
-    };
+        &mt {
+            flavor = "tap-preferred";
+            tapping_term_ms = <200>;
+        };
 
 / {
 
@@ -25,6 +25,7 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
     };
 
         keymap {
@@ -59,9 +60,9 @@
 		
 		    function_layer {
 		bindings = <
-		&trans      &trans            &trans     &trans &trans    		&kp CRRT  &kp F7 &kp F8 &kp F9 &kp F10 
-		&kp CAPS    &kp LS(LC(POWER)) &trans     &trans &trans 	        &kp MINUS &kp F4 &kp F5 &kp F6 &kp F11
-		&bt BT_PRV  &bt BT_CLR        &bt BT_NXT &trans &trans          &kp UNDER &kp F1 &kp F2 &kp F3 &kp F12
+		&trans      &trans            &trans     &trans &trans    		&trans &kp F7 &kp F8 &kp F9 &kp F10 
+		&kp CAPS    &kp LS(LC(POWER)) &trans     &trans &trans 	        &trans &kp F4 &kp F5 &kp F6 &kp F11
+		&bt BT_PRV  &bt BT_CLR        &bt BT_NXT &trans &trans          &trans &kp F1 &kp F2 &kp F3 &kp F12
 					                             &trans &trans          &trans    &trans 
 		>;
 		};
