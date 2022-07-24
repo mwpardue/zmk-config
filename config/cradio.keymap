@@ -28,7 +28,6 @@
 
     };
 
-  {
     combos {
         compatible = "zmk,combos";
         combo_lbl {
@@ -43,7 +42,6 @@
             bindings = <&bootloader>; 
         };
     };
-};
 
         keymap {
                 compatible = "zmk,keymap";
