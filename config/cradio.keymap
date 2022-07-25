@@ -8,10 +8,20 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-        &mt {
-            flavor = "tap-preferred";
-            tapping_term_ms = <200>;
-        };
+#define MOD_MORPH_MASKED(spacent, SPACE, RETURN) \
+    mm_spacent: mm_space_enter {
+        compatible = "zmk,behavior-mod-morph";
+        label = "SPACE_ENTER";
+        #binding-cells = <0>;
+        bindings = <&lt 3 SPC>, <&kp RET>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        masked_mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+
+    &mt {
+        flavor = "tap-preferred";
+        tapping_term_ms = <200>;
+    };
 
 / {
 
@@ -35,13 +45,7 @@
             quick-release;
         };
 
-        spacent: space_enter {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SPACE_ENTER";
-            #binding-cells = <0>;
-            bindings = <&lt 3 SPC>, <&kp RET>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+      MOD_MORPH_MASKED(spacent, SPACE, RETURN)
 
     };
 
