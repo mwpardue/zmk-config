@@ -9,33 +9,15 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define MOD_MORPH_MASKED(NAME, KEY, MOD_KEY) \
-    mm_spacent: mm_spacent { \
+    mm_##NAME: mm_##NAME { \
         compatible = "zmk,behavior-mod-morph"; \
-        label = "SPACE_ENTER"; \
+        label = #NAME; \
         #binding-cells = <0>; \
-        bindings = <&lt 3 SPC>, <&kp RET>; \
+        bindings = <KEY>, <MOD_KEY>; \
         mods = <(MOD_LSFT|MOD_RSFT)>; \
         masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
     };
-
-    mm_bspcdel: mm_bspcdel { \
-        compatible = "zmk,behavior-mod-morph"; \
-        label = "BSPC_DEL"; \
-        #binding-cells = <0>; \
-        bindings = <&kp BSPC>, <&kp DEL>; \
-        mods = <(MOD_LSFT|MOD_RSFT)>; \
-        masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
-    };
-
-    mm_thumbbd: mm_thumbbd { \
-        compatible = "zmk,behavior-mod-morph"; \
-        label = "THUMB_BD"; \
-        #binding-cells = <0>; \
-        bindings = <&lt 2 BSPC>, <&kp DEL>; \
-        mods = <(MOD_LSFT|MOD_RSFT)>; \
-        masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
-    };
-
+    
     &mt {
         flavor = "tap-preferred";
         tapping_term_ms = <200>;
@@ -63,9 +45,9 @@
             quick-release;
         };
 
-      MOD_MORPH_MASKED(spacent, SPACE, RETURN)
-      MOD_MORPH_MASKED(bspcdel, BACKSPACE, DELETE)
-      MOD_MORPH_MASKED(thumbbd, BACKSPACE, DELETE)
+      MOD_MORPH_MASKED(spacent, &lt 3 SPACE, &kp RETURN)
+      MOD_MORPH_MASKED(bspcdel, &kp BSPC, &kp DELETE)
+      MOD_MORPH_MASKED(thumbbd, &lt 2 BSPC, &kp DELETE)
 
     };
 
