@@ -9,13 +9,13 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define MOD_MORPH_MASKED(spacent, SPACE, RETURN) \
-    mm_spacent: mm_space_enter {
-        compatible = "zmk,behavior-mod-morph";
-        label = "SPACE_ENTER";
-        #binding-cells = <0>;
-        bindings = <&lt 3 SPC>, <&kp RET>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        masked_mods = <(MOD_LSFT|MOD_RSFT)>;
+    mm_spacent: mm_space_enter { \
+        compatible = "zmk,behavior-mod-morph"; \
+        label = "SPACE_ENTER"; \
+        #binding-cells = <0>; \
+        bindings = <&lt 3 SPC>, <&kp RET>; \
+        mods = <(MOD_LSFT|MOD_RSFT)>; \
+        masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
     };
 
     &mt {
