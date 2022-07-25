@@ -41,15 +41,30 @@
         compatible = "zmk,combos";
         combo_lbl {
             timeout-ms = <50>;
-            key-positions = <0 4 24>;
+            key-positions = <0 11 22>;
             bindings = <&bootloader>;
         };
 
         combo_rbl {
             timeout-ms = <50>;
-            key-positions = <5 9 25>;
+            key-positions = <9 18 27>;
             bindings = <&bootloader>; 
         };
+
+        combo_ret {
+            timeout-ms = <50>;
+            key-positions = <9 18 27>;
+            bindings = <&bootloader>; 
+        };
+
+        spacent: space_enter {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPACE_ENTER";
+            #binding-cells = <0>;
+            bindings = <&lt 3 SPC>, <&kp RET>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
     };
 
         keymap {
@@ -60,7 +75,7 @@
 		&kp Q      &kp W       &kp E       &kp R       &kp T 			     &kp Y       &kp U       &kp I       &kp O       &kp P 
 		&kp A      &hm LSHFT S &hm LCTRL D &hm LGUI F  &kp G                 &kp H       &hm RGUI J  &hm RCTRL K &hm RSHFT L &kp QUOT
 		&kp Z      &kp X       &kp C       &hm LALT V  &kp B			     &kp N       &hm RALT M  &kp CMMA    &kp DOT     &kp SLASH
-          				                   &lt 1 TAB   &skq LSHFT            &lt 2 BSPC   &lt 3 SPC 
+          				                   &lt 1 TAB   &skq LSHFT            &lt 2 BSPC   &spacent
 		>;
 		};
 
