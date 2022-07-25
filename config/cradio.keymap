@@ -35,6 +35,14 @@
             quick-release;
         };
 
+        spacent: space_enter {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPACE_ENTER";
+            #binding-cells = <0>;
+            bindings = <&lt 3 SPC>, <&kp RET>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
     };
 
     combos {
@@ -55,14 +63,6 @@
             timeout-ms = <50>;
             key-positions = <9 18 27>;
             bindings = <&bootloader>; 
-        };
-
-        spacent: space_enter {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SPACE_ENTER";
-            #binding-cells = <0>;
-            bindings = <&lt 3 SPC>, <&kp RET>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
     };
