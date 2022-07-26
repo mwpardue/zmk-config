@@ -44,9 +44,9 @@
         };
 
 
-        };
-
     };
+
+};
 
     combos {
         compatible = "zmk,combos";
@@ -67,6 +67,7 @@
             key-positions = <9 18 27>;
             bindings = <&bootloader>; 
         };
+    };
 
         macros {
         tips: tips {
