@@ -13,15 +13,6 @@
         tapping_term_ms = <200>;
     };
 
-        mm_spacent: spacent { \
-            compatible = "zmk,behavior-mod-morph"; \
-            label = "SPACE_ENTER"; \
-            #binding-cells = <0>; \
-            bindings = <&lt 3 SPC>, <&kp RET>; \
-            mods = <(MOD_LSFT|MOD_RSFT)>; \
-            masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
-        };
-
 / {
 
     behaviors {
@@ -42,6 +33,17 @@
             bindings = <&kp>;
             release-after-ms = <1000>;
             quick-release;
+
+        mm_spacent: mm_spacent { \
+            compatible = "zmk,behavior-mod-morph"; \
+            label = "SPACE_ENTER"; \
+            #binding-cells = <0>; \
+            bindings = <&lt 3 SPC>, <&kp RET>; \
+            mods = <(MOD_LSFT|MOD_RSFT)>; \
+            masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
+        };
+
+
         };
 
     };
