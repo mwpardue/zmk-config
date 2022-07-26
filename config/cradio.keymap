@@ -43,6 +43,23 @@
             masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
 
+        mm_bspcdel: mm_bspcdel { \
+            compatible = "zmk,behavior-mod-morph"; \
+            label = "BSPC_DEL"; \
+            #binding-cells = <0>; \
+            bindings = <&kp BSPC>, <&kp DEL>; \
+            mods = <(MOD_LSFT|MOD_RSFT)>; \
+            masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
+        };
+
+        mm_thumbbd: mm_thumbbd { \
+            compatible = "zmk,behavior-mod-morph"; \
+            label = "THUMB_BD"; \
+            #binding-cells = <0>; \
+            bindings = <&lt 2 BSPC>, <&kp DEL>; \
+            mods = <(MOD_LSFT|MOD_RSFT)>; \
+            masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
+        };
 
     };
 
@@ -89,14 +106,14 @@
 		&kp Q      &kp W       &kp E       &kp R       &kp T 			     &kp Y       &kp U       &kp I       &kp O       &kp P 
 		&kp A      &hm LSHFT S &hm LCTRL D &hm LGUI F  &kp G                 &kp H       &hm RGUI J  &hm RCTRL K &hm RSHFT L &kp QUOT
 		&kp Z      &kp X       &kp C       &hm LALT V  &kp B			     &kp N       &hm RALT M  &kp CMMA    &kp DOT     &kp SLASH
-          				                   &lt 1 TAB   &skq LSHFT            &lt 2 BSPC   &mm_spacent
+          				                   &lt 1 TAB   &skq LSHFT            &mm_thumbbd &mm_spacent
 		>;
 		};
 
        		numpad_layer {
 		bindings = <
 		&kp TAB     &kp LS(LC(TAB)) &kp UP        &kp LC(TAB)  &trans 			     &kp MINUS     &kp N7       &kp N8       &kp N9       &kp SLASH
-		&kp BSPC    &kp LEFT        &kp DOWN      &kp RIGHT    &trans                &kp COLON     &hm RGUI N4  &hm RCTRL N5 &hm RSHFT N6 &kp DOT
+		&mm_bspcdel &kp LEFT        &kp DOWN      &kp RIGHT    &trans                &kp COLON     &hm RGUI N4  &hm RCTRL N5 &hm RSHFT N6 &kp DOT
 		&trans      &trans          &kp LG(GRAVE) &trans       &trans			     &kp EQUAL     &hm RALT N1  &kp N2       &kp N3       &kp RET
           				                          &trans       &trans                &mt LSHFT SPC &kp N0 
 		>;
@@ -113,7 +130,7 @@
 		
 		    function_layer {
 		bindings = <
-		&trans      &trans                &trans     &trans &bootloader        &bootlaoder &kp F7 &kp F8 &kp F9 &kp F10 
+		&trans      &trans                &trans     &trans &bootloader        &bootloader &kp F7 &kp F8 &kp F9 &kp F10 
 		&kp CAPS    &kp LS(LC(K_POWER))   &trans     &trans &trans             &trans      &kp F4 &kp F5 &kp F6 &kp F11
 		&bt BT_PRV  &bt BT_CLR            &bt BT_NXT &trans &trans             &trans      &kp F1 &kp F2 &kp F3 &kp F12
 					                                 &trans &trans             &trans      &trans 
