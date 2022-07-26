@@ -7,16 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-
-#define MOD_MORPH_MASKED(NAME, KEY, MOD_KEY) \
-    mm_##NAME: mm_##NAME { \
-        compatible = "zmk,behavior-mod-morph"; \
-        label = #NAME; \
-        #binding-cells = <0>; \
-        bindings = <KEY>, <MOD_KEY>; \
-        mods = <(MOD_LSFT|MOD_RSFT)>; \
-        masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
-    };
     
     &mt {
         flavor = "tap-preferred";
@@ -45,9 +35,32 @@
             quick-release;
         };
 
-      MOD_MORPH_MASKED(spacent, &lt 3 SPACE, &kp RETURN)
-      MOD_MORPH_MASKED(bspcdel, &kp BSPC, &kp DELETE)
-      MOD_MORPH_MASKED(thumbbd, &lt 2 BSPC, &kp DELETE)
+        mm_spacent: mm_spacent { \
+            compatible = "zmk,behavior-mod-morph"; \
+            label = "SPACE_ENTER"; \
+            #binding-cells = <0>; \
+            bindings = <&lt 3 SPC>, <&kp RET>; \
+            mods = <(MOD_LSFT|MOD_RSFT)>; \
+            masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
+        };
+
+        mm_bspcdel: mm_bspcdel { \
+            compatible = "zmk,behavior-mod-morph"; \
+            label = "BSPC_DEL"; \
+            #binding-cells = <0>; \
+            bindings = <&kp BSPC>, <&kp DEL>; \
+            mods = <(MOD_LSFT|MOD_RSFT)>; \
+            masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
+        };
+
+        mm_thumbbd: mm_thumbbd { \
+            compatible = "zmk,behavior-mod-morph"; \
+            label = "THUMB_BD"; \
+            #binding-cells = <0>; \
+            bindings = <&lt 2 BSPC>, <&kp DEL>; \
+            mods = <(MOD_LSFT|MOD_RSFT)>; \
+            masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
+        };
 
     };
 
