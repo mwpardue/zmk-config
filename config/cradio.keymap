@@ -91,7 +91,7 @@
             label = "TIPS";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            tap_ms = <30>;
+            tap-ms = <30>;
             bindings
                 = <&macro_tap &kp T &kp R &kp U &kp E &kp I &kp P &kp S &kp O &kp L &kp U &kp T &kp I &kp O &kp N &kp S &kp DOT &kp C &kp O &kp M>
                 ;
