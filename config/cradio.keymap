@@ -14,8 +14,8 @@
     };
 
     &lt {
-        flavor = "tap-preferred";
-        quick-tap-ms = <200>;
+        flavor = "balanced";
+        quick-tap-ms = <0>;
         tapping_term_ms = <175>;
     };
 
@@ -32,6 +32,17 @@
             bindings = <&kp>, <&kp>;
         };
 
+        ltt: layer_tap_tp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAPTP";
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <125>;
+            flavor = "tap-preferred";
+            global-quick-tap;
+            bindings = <&mo>, <&kp>;
+        };
+
         skq: sticky_key_quick_release {
             compatible = "zmk,behavior-sticky-key";
             label = "STICKY_KEY_QUICK_RELEASE";
@@ -44,7 +55,7 @@
             compatible = "zmk,behavior-mod-morph"; \
             label = "SPACE_ENTER"; \
             #binding-cells = <0>; \
-            bindings = <&lt 3 SPC>, <&kp RET>; \
+            bindings = <&ltt 3 SPC>, <&kp RET>; \
             mods = <(MOD_LSFT|MOD_RSFT)>; \
             masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
