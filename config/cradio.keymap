@@ -44,7 +44,7 @@
             compatible = "zmk,behavior-mod-morph"; \
             label = "SPACE_ENTER"; \
             #binding-cells = <0>; \
-            bindings = <&ltt 3 SPC>, <&kp RET>; \
+            bindings = <&lt 3 SPC>, <&kp RET>; \
             mods = <(MOD_LSFT|MOD_RSFT)>; \
             masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
