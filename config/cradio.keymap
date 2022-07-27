@@ -39,7 +39,7 @@
             tapping-term-ms = <250>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+            bindings = <&mo>, <&kp>;
         };
 
         skq: sticky_key_quick_release {
