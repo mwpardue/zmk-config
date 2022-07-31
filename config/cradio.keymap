@@ -120,7 +120,7 @@
        		numpad_layer {
 		bindings = <
 		&kp TAB     &kp LS(LC(TAB)) &kp UP        &kp LC(TAB)  &trans 			     &kp MINUS     &kp N7       &kp N8       &kp N9       &kp SLASH
-		&mm_bspcdel &kp LEFT        &kp DOWN      &kp RIGHT    &trans                &kp COLON     &hm RGUI N4  &hm RCTRL N5 &hm RSHFT N6 &kp DOT
+		&mm_bspcdel &kp LEFT        &kp DOWN      &kp RIGHT    &trans                &kp COLON     &hm RGUI N4  &hm RSHFT N5 &hm RCTRL N6 &kp DOT
 		&trans      &trans          &kp LG(GRAVE) &trans       &trans			     &kp EQUAL     &hm RALT N1  &kp N2       &kp N3       &kp RET
           				                          &trans       &trans                &mt LSHFT SPC &kp N0 
 		>;
