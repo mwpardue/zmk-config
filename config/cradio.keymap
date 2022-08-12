@@ -67,7 +67,7 @@
             tapping-term-ms = <225>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
-            bindings = <&kq>, <&skq>;
+            bindings = <&kp>, <&skq>;
         };
 
         mm_spacent: mm_spacent { \
