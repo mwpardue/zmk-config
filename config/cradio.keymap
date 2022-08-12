@@ -60,6 +60,16 @@
             release-after-ms = <1000>;
             quick-release;
 
+        skmt: sticky_key_mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "STICKY_KEY_MOD_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <225>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&skq>, <&kp>;
+        };
+
         mm_spacent: mm_spacent { \
             compatible = "zmk,behavior-mod-morph"; \
             label = "SPACE_ENTER"; \
@@ -110,10 +120,10 @@
                 
        		default_layer {
 		bindings = <
-		&kp Q      &kp W       &kp E       &kp R       &kp T 			     &kp Y       &kp U       &kp I       &kp O       &kp P 
-		&kp A      &hm LCTRL S &hm LSHFT D &hm LGUI F  &kp G                 &kp H       &hm RGUI J  &hm RSHFT K &hm RCTRL L &kp QUOT
-		&kp Z      &kp X       &kp C       &hm LALT V  &kp B			     &kp N       &hm RALT M  &kp CMMA    &kp DOT     &kp SLASH
-          				                   &lth 1 TAB   &skq LSHFT            &mm_thumbbd &mm_spacent
+		&kp Q      &kp W       &kp E       &kp R       &kp T 			                    &kp Y       &kp U       &kp I       &kp O       &kp P 
+		&kp A      &hm LCTRL S &hm LSHFT D &hm LGUI F  &kp G                                &kp H       &hm RGUI J  &hm RSHFT K &hm RCTRL L &kp QUOT
+		&kp Z      &kp X       &kp C       &hm LALT V  &kp B			                    &kp N       &hm RALT M  &kp CMMA    &kp DOT     &kp SLASH
+          				                   &lth 1 TAB   &skmt LC(LS(LALT)) LSHFT            &mm_thumbbd &mm_spacent
 		>;
 		};
 
@@ -128,10 +138,10 @@
 		
 		    symbol_layer {
 		bindings = <
-		&kp ESC  &kp GRAVE &kp TILDE  &kp BSLH &tips    			&trans &trans        &trans    &trans    &trans 
-		&kp AT   &kp BSLH  &kp UNDER  &kp PIPE &kp SCLN 			&trans &kp RGUI      &kp RCTRL &kp RSHFT &trans
-		&kp LBRC &kp RBRC  &kp LBKT   &kp RBKT &kp BSLH    			&trans &hm RALT LPAR &kp RPAR  &kp LT    &kp GT
-					                  &trans   &mt LSHFT SPC  		&trans &trans 
+		&kp ESC  &kp GRAVE &kp TILDE  &kp BSLH &tips    			            &trans &trans        &trans    &trans    &trans 
+		&kp AT   &kp BSLH  &kp UNDER  &kp PIPE &kp SCLN 			            &trans &kp RGUI      &kp RSHFT &kp RCTRL &trans
+		&kp LBRC &kp RBRC  &kp LBKT   &kp RBKT &kp BSLH    			            &trans &hm RALT LPAR &kp RPAR  &kp LT    &kp GT
+					                  &trans   &mt LG(LC(LS(LALT))) SPC  		&trans &trans 
 		>;
 		};
 		
