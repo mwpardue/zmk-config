@@ -121,6 +121,7 @@
             tap-ms = <30>;
             bindings
                 = <&macro_tap &kp LPAR &kp RPAR &kp LEFT>
+                ;
         };
 
         curb: curb {
@@ -131,6 +132,7 @@
             tap-ms = <30>;
             bindings
                 = <&macro_tap &kp LBRC &kp RBRC &kp LEFT>
+                ;
         };
 
         bracket: bracket {
@@ -141,6 +143,7 @@
             tap-ms = <30>;
             bindings
                 = <&macro_tap &kp LBKT &kp RPBKT &kp LEFT>
+                ;
         };
       };
 
