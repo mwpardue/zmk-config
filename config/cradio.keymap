@@ -59,6 +59,7 @@
             bindings = <&kp>;
             release-after-ms = <1000>;
             quick-release;
+        };
 
         skmt: sticky_key_mod_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -99,7 +100,6 @@
 
     };
 
-};
 
         macros {
         tips: tips {
@@ -171,7 +171,6 @@
             bindings = <&kp LBKT>, <&bracket>;
         };
 
-    };
 
         keymap {
                 compatible = "zmk,keymap";
