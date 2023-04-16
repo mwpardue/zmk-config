@@ -108,21 +108,6 @@
             masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
 
-    };
-
-
-        macros {
-        tips: tips {
-            label = "TIPS";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <30>;
-            bindings
-                = <&macro_tap &kp T &kp R &kp U &kp E &kp I &kp P &kp S &kp O &kp L &kp U &kp T &kp I &kp O &kp N &kp S &kp DOT &kp C &kp O &kp M>
-                ;
-        };
-
         paren: paren {
             label = "Parenthesis";
             compatible = "zmk,behavior-macro";
@@ -155,7 +140,6 @@
                 = <&macro_tap &kp LBKT &kp RBKT &kp LEFT>
                 ;
         };
-      };
 
         tdpar: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
@@ -179,6 +163,20 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LBKT>, <&bracket>;
+        };
+    };
+
+        macros {
+        tips: tips {
+            label = "TIPS";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <30>;
+            bindings
+                = <&macro_tap &kp T &kp R &kp U &kp E &kp I &kp P &kp S &kp O &kp L &kp U &kp T &kp I &kp O &kp N &kp S &kp DOT &kp C &kp O &kp M>
+                ;
+          };
         };
 
 
