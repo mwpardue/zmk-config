@@ -142,7 +142,7 @@
             wait-ms = <20>;
             tap-ms = <30>;
             bindings
-                = <&macro_tap &kp LBKT &kp RPBKT &kp LEFT>
+                = <&macro_tap &kp LBKT &kp RBKT &kp LEFT>
                 ;
         };
       };
