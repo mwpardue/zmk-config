@@ -52,6 +52,16 @@
             bindings = <&mo>, <&kp>;
         };
 
+        ltcw: layer_tap_capsword {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAPCW";
+            #binding-cells = <1>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <200>;
+            flavor = "hold-preferred";
+            bindings = <&mo>, <&caps_word>;
+        };
+
         skq: sticky_key_quick_release {
             compatible = "zmk,behavior-sticky-key";
             label = "STICKY_KEY_QUICK_RELEASE";
@@ -179,8 +189,8 @@
 		bindings = <
 		&kp Q       &kp W      &kp E       &kp R       &kp T 			                    &kp Y       &kp U       &kp I       &kp O       &kp P 
 		&hm LCTRL A &hm LALT S &hm LSHFT D &hm LGUI F  &kp G                          &kp H       &hm RGUI J  &hm RSHFT K &hm RALT L  &hm RCTRL QUOT
-		&ltt 3 Z       &kp X      &kp C       &kp V       &kp B			                    &kp N       &kp M       &kp CMMA    &kp DOT     &kp SLASH
-          				                   &lth 2 TAB   &lth 1 caps_word            &mm_thumbbd &mm_spacent
+		&ltt 3 Z    &kp X      &kp C       &kp V       &kp B			                    &kp N       &kp M       &kp CMMA    &kp DOT     &kp SLASH
+          				                   &lth 2 TAB   &ltcw 1                 &mm_thumbbd &mm_spacent
 		>;
 		};
 
