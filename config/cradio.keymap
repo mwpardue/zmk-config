@@ -81,15 +81,6 @@
             bindings = <&kp>, <&skq>;
         };
 
-        mm_spacent: mm_spacent { \
-            compatible = "zmk,behavior-mod-morph"; \
-            label = "SPACE_ENTER"; \
-            #binding-cells = <0>; \
-            bindings = <&kp SPC>, <&kp RET>; \
-            mods = <(MOD_LSFT|MOD_RSFT)>; \
-            masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
-        };
-
         mm_bspcdel: mm_bspcdel { \
             compatible = "zmk,behavior-mod-morph"; \
             label = "BSPC_DEL"; \
@@ -186,6 +177,11 @@
               key-positions = <0 1>;
               bindings = <&kp ESC>;
           };
+          combo_enter {
+              timeout-ms = <50>;
+              key-positions = <28 29>;
+              bindings = <&kp RET>;
+          };
         };
 
 
@@ -198,7 +194,7 @@
 		&kp Q       &kp W      &kp E       &kp R       &kp T 			                    &kp Y       &kp U       &kp I       &kp O       &kp P 
 		&hm LALT A &hm LCTRL S &hm LSHFT D &hm LGUI F  &kp G                          &kp H       &hm RGUI J  &hm RSHFT K &hm RCTRL L  &hm RALT QUOT
 		&ltt 3 Z    &kp X      &kp C       &kp V       &kp B			                    &kp N       &kp M       &kp CMMA    &kp DOT     &kp SLASH
-          				                   &lth 2 TAB   &ltcw 1 &trans                &mm_thumbbd &mm_spacent
+          				                   &lth 2 TAB   &ltcw 1 &trans                &mm_thumbbd &ltt 4 SPACE
 		>;
 		};
 
@@ -229,5 +225,14 @@
 		>;
 		};
         
+		    macro_layer {
+		bindings = <
+		&trans   &trans   &trans   &trans   &tips    			              &trans   &trans   &trans &trans    &trans 
+		&trans   &trans   &trans   &trans   &trans                      &trans   &trans   &trans &trans    &kp RET
+		&trans   &trans   &trans   &trans   &trans                      &trans   &trans   &trans &trans    &kp RET
+					                  &trans   &trans                      		&trans &trans 
+		>;
+		};
+		
 	};
 };
