@@ -96,7 +96,7 @@
             compatible = "zmk,behavior-mod-morph"; \
             label = "THUMB_RET"; \
             #binding-cells = <0>; \
-            bindings = <&lth 3 SPACE>, <&kp RET>; \
+            bindings = <&lth 1 SPACE>, <&kp RET>; \
             mods = <(MOD_LSFT|MOD_RSFT)>; \
             masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
@@ -105,7 +105,7 @@
             compatible = "zmk,behavior-mod-morph"; \
             label = "THUMB_BD"; \
             #binding-cells = <0>; \
-            bindings = <&lth 1 BSPC>, <&kp RET>; \
+            bindings = <&lth 3 BSPC>, <&kp DEL>; \
             mods = <(MOD_LSFT|MOD_RSFT)>; \
             masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
@@ -226,13 +226,13 @@
 		&kp Q      &kp W       &kp E       &kp R       &kp T 			                    &kp Y       &kp U       &kp I       &kp O       &kp P 
 		&hm LALT A &hm LCTRL S &hm LSHFT D &hm LGUI F  &kp G                          &kp H       &hm RGUI J  &hm RSHFT K &hm RCTRL L  &hm RALT QUOT
 		&hm MEH Z  &kp X       &kp C       &kp V       &kp B			                    &kp N       &kp M       &kp CMMA    &kp DOT     &kp SLASH
-          				                   &lth 2 TAB   &mm_thumbbd                   &mm_thumbret  &ltt 4 SPACE
+          				                   &lth 2 TAB   &mm_thumbret                   &mm_thumbbd  &ltt 4 SPACE
 		>;
 		};
 
        		numpad_layer {
 		bindings = <
-		&tdpar       &kp RPAR         &tdcurb        &kp RBRC      &tips 			     &kp MINUS     &kp N7  &kp N8 &kp N9 &kp SLASH
+		&tdcurb     &kp RBRC          &tdpar         &kp RPAR      &tips 			     &kp MINUS     &kp N7  &kp N8 &kp N9 &kp SLASH
 		&hm LALT AT &hm LCTRL BSLH    &hm LSFT UNDER &hm LGUI PIPE &trans          &kp MINUS     &kp N4  &kp N5 &kp N6 &kp SEMICOLON
 		&tdbrkt      &kp RBKT         &trans         &trans        &trans			     &kp EQUAL     &kp N1  &kp N2 &kp N3 &kp RET
           				                          &trans       &trans                &kp DOT       &kp N0 
@@ -241,10 +241,10 @@
 		
 		    navigation_layer {
 		bindings = <
-		&kp ESC  &kp GRAVE &app_sw    &kp BSLH &tips    			              &trans   &trans   &trans &trans    &trans 
-		&hm LALT AT &hm LCTRL BSLH    &hm LSFT UNDER &hm LGUI PIPE &trans   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
-		&kp LBRC &kp RBRC  &kp LBKT   &kp RBKT &kp BSLH  			              &trans   &trans   &trans &trans    &kp RET
-					                  &trans   &trans                      		&trans &trans 
+		&kp ESC  &kp GRAVE &app_sw    &kp BSLH  &tips    			    &trans   &trans   &trans &trans    &trans 
+		&kp LALT &kp LCTRL &kp LSFT   &kp LGUI  &trans            &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
+		&kp LBRC &kp RBRC  &kp LG(C)  &kp LG(V) &kp BSLH  		    &trans   &trans   &trans &trans    &kp RET
+					                  &trans   &trans                		&trans &trans 
 		>;
 		};
 		
