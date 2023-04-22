@@ -90,11 +90,20 @@
             masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
 
+        mm_thumbret: mm_thumbret { \
+            compatible = "zmk,behavior-mod-morph"; \
+            label = "THUMB_RET"; \
+            #binding-cells = <0>; \
+            bindings = <&lth 3 SPACE>, <&kp RET>; \
+            mods = <(MOD_LSFT|MOD_RSFT)>; \
+            masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
+        };
+
         mm_thumbbd: mm_thumbbd { \
             compatible = "zmk,behavior-mod-morph"; \
             label = "THUMB_BD"; \
             #binding-cells = <0>; \
-            bindings = <&lth 3 BSPC>, <&kp DEL>; \
+            bindings = <&lth 1 BSPC>, <&kp RET>; \
             mods = <(MOD_LSFT|MOD_RSFT)>; \
             masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
@@ -168,6 +177,20 @@
                 = <&macro_tap &kp T &kp R &kp U &kp E &kp I &kp P &kp S &kp O &kp L &kp U &kp T &kp I &kp O &kp N &kp S &kp DOT &kp C &kp O &kp M>
                 ;
           };
+
+        app_sw: app_sw {
+            label = "App Switcher";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <30>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp TAB>
+                , <&macro_pause_for_release>
+                , <&macro_release &kp LGUI>
+                ;
+          };
         };
 
         combos {
@@ -194,7 +217,7 @@
 		&kp Q       &kp W      &kp E       &kp R       &kp T 			                    &kp Y       &kp U       &kp I       &kp O       &kp P 
 		&hm LALT A &hm LCTRL S &hm LSHFT D &hm LGUI F  &kp G                          &kp H       &hm RGUI J  &hm RSHFT K &hm RCTRL L  &hm RALT QUOT
 		&ltt 3 Z    &kp X      &kp C       &kp V       &kp B			                    &kp N       &kp M       &kp CMMA    &kp DOT     &kp SLASH
-          				                   &lth 2 TAB   &ltcw 1 &trans                &mm_thumbbd &ltt 4 SPACE
+          				                   &lth 2 TAB   &mm_thumbbd                   &mm_thumbret  &ltt 4 SPACE
 		>;
 		};
 
@@ -209,7 +232,7 @@
 		
 		    navigation_layer {
 		bindings = <
-		&kp ESC  &kp GRAVE &kp TILDE  &kp BSLH &tips    			              &trans   &trans   &trans &trans    &trans 
+		&kp ESC  &kp GRAVE &app_sw    &kp BSLH &tips    			              &trans   &trans   &trans &trans    &trans 
 		&hm LALT AT &hm LCTRL BSLH    &hm LSFT UNDER &hm LGUI PIPE &trans   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
 		&kp LBRC &kp RBRC  &kp LBKT   &kp RBKT &kp BSLH  			              &trans   &trans   &trans &trans    &kp RET
 					                  &trans   &trans                      		&trans &trans 
