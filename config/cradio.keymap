@@ -20,6 +20,10 @@
     };
 
 #define MEH LC(LS(LALT))
+#define num 1
+#define nav 2
+#define fun 3
+#define mac 4
 
 / {
 
@@ -96,7 +100,7 @@
             compatible = "zmk,behavior-mod-morph"; \
             label = "THUMB_RET"; \
             #binding-cells = <0>; \
-            bindings = <&lth 1 SPACE>, <&kp RET>; \
+            bindings = <&lth num SPACE>, <&kp RET>; \
             mods = <(MOD_LSFT|MOD_RSFT)>; \
             masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
@@ -105,7 +109,7 @@
             compatible = "zmk,behavior-mod-morph"; \
             label = "THUMB_BD"; \
             #binding-cells = <0>; \
-            bindings = <&lth 3 BSPC>, <&kp DEL>; \
+            bindings = <&lth fun BSPC>, <&kp DEL>; \
             mods = <(MOD_LSFT|MOD_RSFT)>; \
             masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
@@ -226,7 +230,7 @@
 		&kp Q      &kp W       &kp E       &kp R       &kp T 			                    &kp Y       &kp U       &kp I       &kp O       &kp P 
 		&hm LALT A &hm LCTRL S &hm LSHFT D &hm LGUI F  &kp G                          &kp H       &hm RGUI J  &hm RSHFT K &hm RCTRL L  &hm RALT QUOT
 		&hm MEH Z  &kp X       &kp C       &kp V       &kp B			                    &kp N       &kp M       &kp CMMA    &kp DOT     &kp SLASH
-          				                   &lth 2 TAB   &mm_thumbret                   &mm_thumbbd  &ltt 4 SPACE
+          				                   &lth nav TAB  &lth num RET                  &mm_thumbbd  &ltt mac SPACE
 		>;
 		};
 
