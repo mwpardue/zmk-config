@@ -42,7 +42,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAPTP";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <125>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&mo>, <&kp>;
@@ -52,7 +52,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAPHP";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <125>;
             quick-tap-ms = <200>;
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
@@ -62,7 +62,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAPCW";
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <125>;
             quick-tap-ms = <200>;
             flavor = "hold-preferred";
             bindings = <&mo>, <&caps_word>;
@@ -85,33 +85,6 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&skq>;
-        };
-
-        mm_bspcdel: mm_bspcdel { \
-            compatible = "zmk,behavior-mod-morph"; \
-            label = "BSPC_DEL"; \
-            #binding-cells = <0>; \
-            bindings = <&kp BSPC>, <&kp DEL>; \
-            mods = <(MOD_LSFT|MOD_RSFT)>; \
-            masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
-        };
-
-        mm_thumbret: mm_thumbret { \
-            compatible = "zmk,behavior-mod-morph"; \
-            label = "THUMB_RET"; \
-            #binding-cells = <0>; \
-            bindings = <&lth num SPACE>, <&kp RET>; \
-            mods = <(MOD_LSFT|MOD_RSFT)>; \
-            masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
-        };
-
-        mm_thumbbd: mm_thumbbd { \
-            compatible = "zmk,behavior-mod-morph"; \
-            label = "THUMB_BD"; \
-            #binding-cells = <0>; \
-            bindings = <&lth fun BSPC>, <&kp DEL>; \
-            mods = <(MOD_LSFT|MOD_RSFT)>; \
-            masked_mods = <(MOD_LSFT|MOD_RSFT)>; \
         };
 
         paren: paren {
