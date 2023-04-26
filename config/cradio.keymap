@@ -157,6 +157,17 @@
                 ;
           };
 
+        pass: pass {
+            label = "Pass";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <30>;
+            bindings
+                = <&macro_tap &kp M &kp @ &kp t &kp t &kp h &kp e &kp w &kp 6 &kp 7 &kp 8 &kp 6>
+                ;
+          };
+
         app_sw: app_sw {
             label = "App Switcher";
             compatible = "zmk,behavior-macro";
@@ -190,6 +201,18 @@
               timeout-ms = <50>;
               key-positions = <12 17>;
               bindings = <&caps_word>;
+          };
+
+          combo_power {
+              timeout-ms = <50>;
+              key-positions = <0 1 31>;
+              bindings = <&kp C_POWER>;
+          };
+
+          combo_pass {
+              timeout-ms = <50>;
+              key-positions = <8 9 32>;
+              bindings = <&pass>;
           };
         };
 
