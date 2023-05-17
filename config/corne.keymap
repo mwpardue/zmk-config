@@ -217,6 +217,14 @@
             tapping-term-ms = <150>;
             bindings = <&mt (LG(X)) (LG(C))>, <&trans>;
         };
+        gresc: grave_escape {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GRAVE_ESCAPE";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&kp GRAVE>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+        };
+    };
     };
 
         macros {
@@ -265,7 +273,7 @@
           combo_esc {
               timeout-ms = <50>;
               key-positions = <1 2>;
-              bindings = <&kp ESC>;
+              bindings = <&gresc>;
           };
 
           combo_enter {
@@ -302,8 +310,8 @@
 		bindings = <
 &trans		&kp Q       &kp W        &kp E        &kp R        &kp T 			                    &kp Y        &kp U        &kp I        &kp O        &kp P          &trans 
 &trans		&lhm LALT A &lhm LCTRL S &lhm LSHFT D &lhm LGUI F  &kp G                          &kp H        &rhm RGUI J  &rhm RSHFT K &rhm RCTRL L &rhm RALT QUOT &trans
-&trans		&lhm MEH Z  &kp X        &kp C        &kp V        &kp B			                    &kp N        &kp M        &kp CMMA     &kp DOT      &lth fun SLASH &trans
-          				                &kp ESC &lth num BSPC &lth nav TAB                  &ltt mac SPACE &hm LGUI RET &kp ESC
+&trans		&lhm MEH Z  &kp X        &kp C        &kp V        &kp B			                    &kp N        &kp M        &kp CMMA     &kp DOT      &kp SLASH &trans
+          				                &kp ESC &lth num BSPC &lth nav TAB                  &ltt mac SPACE &hm LGUI RET &lth fun ESC
 		>;
 		};
 
