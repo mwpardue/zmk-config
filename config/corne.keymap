@@ -320,8 +320,8 @@
         
 		    macro_layer {
 		bindings = <
-&trans		&trans   &trans   &trans   &trans   &tips    			              &trans   &trans   &trans &trans    &trans  &trans
-&trans		&trans   &trans   &trans   &trans   &trans                      &trans   &tdmonl  &tdmonm  &tdmonr  &kp RET &trans
+&trans		&trans   &trans   &trans   &trans   &tips    			              &kp C_VOL_UP   &kp C_PREV   &kp C_PP  &kp C_NEXT    &trans  &trans
+&trans		&trans   &trans   &trans   &trans   &trans                      &kp C_VOL_DN   &tdmonl  &tdmonm  &tdmonr  &kp RET &trans
 &trans		&trans   &trans   &trans   &trans   &trans                      &trans   &trans      &tdmonbm  &trans       &kp RET &trans
 					            &trans     &trans   &trans                      		&trans &trans &trans
 		>;
