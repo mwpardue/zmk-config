@@ -199,7 +199,23 @@
             label = "TAP_DANCE_6";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&mt (LG(LA(LS(LC(N2))))) (LA(LS(LC(N2))))>, <&trans>;
+            bindings = <&mt (LG(LA(LS(LC(N1))))) (LA(LS(LC(N1))))>, <&trans>;
+        };
+
+        tdpaste: tap_dance_7 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_7";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&mt (LG(LA(V))) (LG(V))>, <(LG(LC(V)))>;
+        };
+
+        tdcopy: tap_dance_8 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_8";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&mt (LG(X)) (LG(C))>, <&trans>;
         };
     };
 
@@ -304,7 +320,7 @@
 		bindings = <
 &trans		&trans   &kp LC(H) &app_sw    &kp LC(L) &trans              &trans   &trans   &trans &trans    &trans  &trans
 &trans		&kp LALT &kp LCTRL &kp LSFT   &kp LGUI  &trans              &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-&trans		&trans   &trans    &kp LG(C)  &kp LG(V) &trans  		        &trans   &trans   &trans &trans    &kp RET &trans
+&trans		&trans   &trans    &tdcopy    &tdpaste  &trans  		        &trans   &trans   &trans &trans    &kp RET &trans
 					                        &trans &trans    &trans          		&kp RET  &trans &trans
 		>;
 		};
