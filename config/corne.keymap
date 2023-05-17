@@ -217,6 +217,7 @@
             tapping-term-ms = <150>;
             bindings = <&mt (LG(X)) (LG(C))>, <&trans>;
         };
+
         gresc: grave_escape {
             compatible = "zmk,behavior-mod-morph";
             label = "GRAVE_ESCAPE";
@@ -224,7 +225,6 @@
             bindings = <&kp ESC>, <&kp GRAVE>;
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
         };
-    };
     };
 
         macros {
@@ -273,7 +273,7 @@
           combo_esc {
               timeout-ms = <50>;
               key-positions = <1 2>;
-              bindings = <&gresc>;
+              bindings = <&kp ESC>;
           };
 
           combo_enter {
