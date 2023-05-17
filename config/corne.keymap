@@ -207,7 +207,7 @@
             label = "TAP_DANCE_7";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&mt (LG(LA(V))) (LG(V))>, <(LG(LC(V)))>;
+            bindings = <&mt (LG(LA(V))) (LG(V))>, <&kp (LG(LC(V)))>;
         };
 
         tdcopy: tap_dance_8 {
@@ -312,7 +312,7 @@
 &trans		&tdcurb      &kp RBRC           &tdpar          &kp RPAR       &tips 			     &kp GRAVE     &kp N7  &kp N8 &kp N9 &kp SLASH &trans    
 &trans		&lhm LALT AT &lhm LCTRL BSLH    &lhm LSFT UNDER &lhm LGUI PIPE &trans          &kp MINUS     &kp N4  &kp N5 &kp N6 &kp SEMICOLON &trans
 &trans		&tdbrkt      &kp RBKT           &trans          &trans         &trans			     &kp EQUAL     &kp N1  &kp N2 &kp N3 &kp DOT &trans
-          				                           &trans &trans         &trans          &kp RET       &kp N0  &kp ESC
+          				                           &trans &trans         &trans          &kp N0       &kp DOT  &kp ESC
 		>;
 		};
 		
