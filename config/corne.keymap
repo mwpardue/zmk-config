@@ -169,6 +169,38 @@
             tapping-term-ms = <200>;
             bindings = <&bracket>, <&kp LBKT>;
         };
+
+        tdmonl: tap_dance_3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_3";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&mt (LG(LA(LS(LC(N4))))) (LA(LS(LC(N4))))>, <&trans>;
+        };
+
+        tdmonm: tap_dance_4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_4";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&mt (LG(LA(LS(LC(N5))))) (LA(LS(LC(N5))))>, <&trans>;
+        };
+
+        tdmonr: tap_dance_5 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_5";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&mt (LG(LA(LS(LC(N6))))) (LA(LS(LC(N6))))>, <&trans>;
+        };
+
+        tdmonbm: tap_dance_6 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_6";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&mt (LG(LA(LS(LC(N2))))) (LA(LS(LC(N2))))>, <&trans>;
+        };
     };
 
         macros {
@@ -289,8 +321,8 @@
 		    macro_layer {
 		bindings = <
 &trans		&trans   &trans   &trans   &trans   &tips    			              &trans   &trans   &trans &trans    &trans  &trans
-&trans		&trans   &trans   &trans   &trans   &trans                      &trans   &kp MON_L   &kp MON_M  &kp MON_R    &kp RET &trans
-&trans		&trans   &trans   &trans   &trans   &trans                      &trans   &trans      &kp MON_BL &trans       &kp RET &trans
+&trans		&trans   &trans   &trans   &trans   &trans                      &trans   &tdmonl  &tdmonm  &tdmonr  &kp RET &trans
+&trans		&trans   &trans   &trans   &trans   &trans                      &trans   &trans      &tdmonbm  &trans       &kp RET &trans
 					            &trans     &trans   &trans                      		&trans &trans &trans
 		>;
 		};
