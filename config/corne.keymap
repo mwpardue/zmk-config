@@ -22,7 +22,7 @@
 #define MON_L LC(LA(LS(N4)))
 #define MON_M LC(LA(LS(N5)))
 #define MON_R LC(LA(LS(N6)))
-#define MON_BL LCTL(LALT(LSFT(KC_1)))
+#define MON_BL LC(LA(LS(N1)))
 #define MEH LC(LS(LALT))
 #define num 1
 #define nav 2
