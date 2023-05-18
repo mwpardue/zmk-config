@@ -23,6 +23,7 @@
 #define MON_M LC(LA(LS(N5)))
 #define MON_R LC(LA(LS(N6)))
 #define MON_BL LC(LA(LS(N1)))
+#define MAXWIN LG(LC(LA(LS(M))))
 #define MEH LC(LS(LALT))
 #define num 1
 #define nav 2
@@ -401,7 +402,7 @@
 		bindings = <
 &trans		&trans   &trans   &trans   &trans   &tips    			              &kp C_VOL_UP   &kp C_PREV   &kp C_PP  &kp C_NEXT    &passpal  &trans
 &trans		&trans   &trans   &trans   &trans   &trans                      &kp C_VOL_DN   &tdmonl  &tdmonm  &tdmonr  &kp RET &trans
-&trans		&trans   &trans   &trans   &trans   &trans                      &trans   &trans      &tdmonbm  &trans       &kp RET &trans
+&trans		&trans   &trans   &trans   &trans   &trans                      &trans   &kp MAXWIN     &tdmonbm  &trans       &kp RET &trans
 					            &trans     &trans   &trans                      		&trans &trans &trans
 		>;
 		};
