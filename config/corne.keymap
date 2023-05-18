@@ -228,6 +228,23 @@
             bindings = <&kp ESC>, <&kp GRAVE>;
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
         };
+
+        td_ssfull: td_ssfull {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Screenshot Full";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&mt (LG(LC(LS(N3)))) (LG(LS(N3)))>, <&trans>;
+        };
+
+        td_ssnip: td_ssnip {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Screenshot Snippet";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&mt (LG(LC(LS(N4)))) (LG(LS(N4)))>, <&trans>;
+        };
+
     };
 
         macros {
@@ -382,8 +399,8 @@
 		
 		    navigation_layer {
 		bindings = <
-&trans		&trans   &kp LC(H) &app_sw    &kp LC(L) &trans              &trans   &selword   &selline &trans    &kp SPACE  &trans
-&trans		&kp LALT &kp LCTRL &kp LSFT   &kp LGUI  &trans              &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
+&trans		&trans   &kp LC(H) &app_sw    &kp LC(L) &td_ssfull             &trans   &selword   &selline &trans    &kp SPACE  &trans
+&trans		&kp LALT &kp LCTRL &kp LSFT   &kp LGUI  &td_ssnip              &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
 &trans		&trans   &trans    &tdcopy    &tdpaste  &trans  		        &trans   &trans   &trans &trans    &kp RET &trans
 					                        &trans &trans    &trans          		&kp RET  &trans &trans
 		>;
