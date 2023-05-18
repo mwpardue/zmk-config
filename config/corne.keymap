@@ -62,7 +62,7 @@
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 24 25 26 27 28 29 36 37 38>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
             hold-trigger-on-release;
         };
 
@@ -313,7 +313,7 @@
 &trans		&kp Q       &kp W        &kp E        &kp R        &kp T 			                    &kp Y        &kp U        &kp I        &kp O        &kp P          &trans 
 &trans		&lhm LALT A &lhm LCTRL S &lhm LSHFT D &lhm LGUI F  &kp G                          &kp H        &rhm RGUI J  &rhm RSHFT K &rhm RCTRL L &rhm RALT QUOT &trans
 &trans		&lhm MEH Z  &kp X        &kp C        &kp V        &kp B			                    &kp N        &kp M        &kp CMMA     &kp DOT      &kp SLASH &trans
-          				                &kp ESC &lth nav BSPC &lth num TAB                  &hm LGUI BSPC &ltt mac SPACE  &lth fun ESC
+          				                &kp ESC &lth num BSPC &lth nav TAB                  &ltt mac SPACE     &hm LGUI BSPC  &lth fun ESC
 		>;
 		};
 
