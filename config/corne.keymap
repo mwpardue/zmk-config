@@ -276,7 +276,7 @@
             wait-ms = <20>;
             tap-ms = <30>;
             bindings
-                , <&macro_press &kp LGUI>
+                = <&macro_press &kp LGUI>
                 , <&macro_tap &kp LEFT> 
                 , <&macro_press &kp LSFT>
                 , <&macro_tap &kp RIGHT> 
@@ -292,7 +292,7 @@
             wait-ms = <20>;
             tap-ms = <30>;
             bindings
-                , <&macro_press &kp LALT>
+                = <&macro_press &kp LALT>
                 , <&macro_tap &kp LEFT> 
                 , <&macro_press &kp LSFT>
                 , <&macro_tap &kp RIGHT> 
