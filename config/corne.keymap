@@ -268,6 +268,32 @@
                 , <&macro_release &kp LGUI>
                 ;
           };
+
+        selline: selline {
+            label = "Select Line";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <30>;
+            bindings
+                , <&macro_tap &kp LGUI(LEFT)> 
+                , <&macro_tap &kp LGUI(LSFT(RIGHT))> 
+                ;
+          };
+
+        selword: selword {
+            label = "Select Word";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <30>;
+            bindings
+                , <&macro_tap &kp LALT(LEFT)> 
+                , <&macro_tap &kp LALT(LSFT(RIGHT))> 
+                ;
+          };
+
+
         };
 
         combos {
@@ -328,7 +354,7 @@
 		
 		    navigation_layer {
 		bindings = <
-&trans		&trans   &kp LC(H) &app_sw    &kp LC(L) &trans              &trans   &trans   &trans &trans    &trans  &trans
+&trans		&trans   &kp LC(H) &app_sw    &kp LC(L) &trans              &trans   &selword   &selline &trans    &kp SPACE  &trans
 &trans		&kp LALT &kp LCTRL &kp LSFT   &kp LGUI  &trans              &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
 &trans		&trans   &trans    &tdcopy    &tdpaste  &trans  		        &trans   &trans   &trans &trans    &kp RET &trans
 					                        &trans &trans    &trans          		&kp RET  &trans &trans
