@@ -124,12 +124,23 @@
         };
 
         skq: sticky_key_quick_release {
-            compatible = "zmk,behavior-sticky-key";
-            label = "STICKY_KEY_QUICK_RELEASE";
-            #binding-cells = <1>;
-            bindings = <&kp>;
-            release-after-ms = <1000>;
-            quick-release;
+          compatible = "zmk,behavior-sticky-key";
+          label = "STICKY_KEY_QUICK_RELEASE";
+          #binding-cells = <1>;
+          bindings = <&kp>;
+          release-after-ms = <1000>;
+          quick-release;
+          ignore-modifiers;
+        };
+
+        lts: layer_tap_sk {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAPSK";
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, <&skq>;
         };
 
         skmt: sticky_key_mod_tap {
@@ -411,7 +422,7 @@
 &trans		&kp Q       &kp W        &kp E        &kp R        &kp T 			                    &kp Y        &kp U        &kp I        &kp O        &kp P          &trans 
 &trans		&lhm LALT A &lhm LCTRL S &lshm LSHFT D &lhm LGUI F  &kp G                          &kp H        &rshm RGUI J  &rhm RSHFT K &rhm RCTRL L &rhm RALT QUOT &trans
 &trans		&lhm MEH Z  &kp X        &kp C        &kp V        &kp B			                    &kp N        &kp M        &kp CMMA     &kp DOT      &kp SLASH &trans
-          				                &kp ESC &lth num BSPC &lth nav TAB                  &ltt mac SPACE     &hm LGUI RET  &lth fun ESC
+          				                &kp ESC &lth num BSPC &lts nav LSFT                       &ltt mac SPACE     &hm LGUI RET  &lth fun ESC
 		>;
 		};
 
@@ -428,7 +439,7 @@
 		    navigation_layer {
     label = "NAV";
 		bindings = <
-&trans		&trans   &kp LC(H) &app_sw    &kp LC(L) &td_ssfull             &trans   &selword   &selline &trans    &kp SPACE  &trans
+&trans		&kp TAB  &kp LC(H) &app_sw    &kp LC(L) &td_ssfull             &trans   &selword   &selline &trans    &kp SPACE  &trans
 &trans		&kp LALT &kp LCTRL &kp LSFT   &kp LGUI  &td_ssnip              &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
 &trans		&trans   &trans    &tdcopy    &tdpaste  &trans  		        &trans   &trans   &trans &trans    &kp RET &trans
 					                        &trans &trans    &trans          		&kp RET  &trans &trans
