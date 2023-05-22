@@ -439,9 +439,9 @@
 		    navigation_layer {
     label = "NAV";
 		bindings = <
-&trans		&kp TAB  &kp LC(H) &app_sw    &kp LC(L) &td_ssfull             &trans   &selword   &selline &trans    &kp SPACE  &trans
+&trans		&trans  &kp LC(H) &app_sw    &kp LC(L) &td_ssfull             &trans   &selword   &selline &trans    &kp SPACE  &trans
 &trans		&kp LALT &kp LCTRL &kp LSFT   &kp LGUI  &td_ssnip              &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-&trans		&trans   &trans    &tdcopy    &tdpaste  &trans  		        &trans   &trans   &trans &trans    &kp RET &trans
+&trans		&kp TAB  &trans    &tdcopy    &tdpaste  &trans  		        &trans   &trans   &trans &trans    &kp RET &trans
 					                        &trans &trans    &trans          		&kp RET  &trans &trans
 		>;
 		};
