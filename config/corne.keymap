@@ -452,7 +452,7 @@
 &trans		&tdcurb      &kp RBRC           &tdpar          &kp RPAR       &tips 			     &kp GRAVE     &kp N7  &kp N8 &kp N9 &kp SLASH &trans    
 &trans		&lhm LCTRL AT &lhm LALT BSLH    &lhm LSFT UNDER &lhm LGUI PIPE &trans          &kp MINUS     &kp N4  &kp N5 &kp N6 &kp SEMICOLON &trans
 &trans		&tdbrkt      &kp RBKT           &trans          &trans         &trans			     &kp EQUAL     &kp N1  &kp N2 &kp N3 &kp DOT &trans
-          				                           &trans &trans         &trans          &kp N0       &kp RET  &kp ESC
+          				                           &trans &trans         &trans          &kp RET &kp N0  &kp ESC
 		>;
 		};
 		
