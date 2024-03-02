@@ -388,8 +388,8 @@
             label = "Android Play Pause";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <30>;
+            wait-ms = <100>;
+            tap-ms = <80>;
             bindings
                 = <&macro_tap &bt BT_SEL 1>
                 , <&macro_tap &kp K_PP>
