@@ -157,7 +157,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "GRAVE_ESCAPE";
             #binding-cells = <0>;
-            bindings = <&lts nav LSFT>, <&caps_word>;
+            bindings = <&lts num LSFT>, <&caps_word>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -384,6 +384,26 @@
                 ;
           };
 
+        passpal: passpal {
+            label = "Password Palette";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <30>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp LALT>
+                , <&macro_press &kp LSFT>
+                , <&macro_press &kp LCTRL>
+                , <&macro_tap &kp P> 
+                , <&macro_release &kp LGUI>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp LSFT>
+                , <&macro_release &kp LCTRL>
+                , <&macro_tap &sk LCTRL>
+                ;
+          };
+
         };
 
         combos {
@@ -442,7 +462,7 @@
 &trans		&kp Q       &kp W        &kp E        &kp R        &kp T 			                    &kp Y        &kp U        &kp I        &kp O        &kp P          &trans 
 &trans		&lhm LCTRL A &lhm LALT S &lshm LSHFT D &lhm LGUI F  &kp G                          &kp H        &rshm RGUI J  &rhm RSHFT K &rhm RALT L &rhm RCTRL QUOT &trans
 &trans		&lhm MEH Z  &kp X        &kp C        &kp V        &kp B			                    &kp N        &kp M        &kp CMMA     &kp DOT      &kp SLASH &trans
-          				                &kp ESC &cw_thumb &lth num BSPC                           &hm LGUI RET &ltt mac SPACE     &lth fun ESC
+          				                &kp ESC &cw_thumb &lth nav BSPC                           &hm LSFT SPACE &ltt mac RET     &lth fun ESC
 		>;
 		};
 
@@ -452,7 +472,7 @@
 &trans		&tdcurb      &kp RBRC           &tdpar          &kp RPAR       &tips 			     &kp GRAVE     &kp N7  &kp N8 &kp N9 &kp SLASH &trans    
 &trans		&lhm LCTRL AT &lhm LALT BSLH    &lhm LSFT UNDER &lhm LGUI PIPE &trans          &kp MINUS     &kp N4  &kp N5 &kp N6 &kp SEMICOLON &trans
 &trans		&tdbrkt      &kp RBKT           &trans          &trans         &trans			     &kp EQUAL     &kp N1  &kp N2 &kp N3 &kp DOT &trans
-          				                           &trans &trans         &trans          &kp RET &kp N0  &kp ESC
+          				                           &trans &trans         &trans          &kp N0 &kp RET  &kp ESC
 		>;
 		};
 		
