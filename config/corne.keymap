@@ -480,7 +480,7 @@
         label = "MAC";
 		bindings = <
 &trans		&trans   &trans   &trans   &trans   &tips    			              &kp K_VOL_UP   &kp K_PREV   &kp K_PP  &kp K_NEXT    &passpal  &trans
-&trans		&trans   &trans   &trans   &trans   &trans                      &kp K_VOL_DN   &trans  &kp K_PLAY  &kp C_PLAY  &kp RET &trans
+&trans		&trans   &trans   &trans   &trans   &trans                      &kp K_VOL_DN   &trans  &trans  &kp C_PLAY  &kp RET &trans
 &trans		&trans   &trans   &trans   &trans   &trans                      &kp C_MEDIA_HOME   &kp MAXWIN     &trans  &trans       &kp RET &trans
 					            &trans     &trans   &trans                      		&trans &trans &trans
 		>;
