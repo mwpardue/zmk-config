@@ -384,6 +384,19 @@
                 ;
           };
 
+        a_pp: a_pp {
+            label = "Android Play Pause";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <20>;
+            tap-ms = <30>;
+            bindings
+                = <&macro_tap &kp BT_SEL 1>
+                , <&macro_tap &kp K_PP>
+                , <&macro_tap &kp BT_SEL 0>
+                ;
+          };
+
         };
 
         combos {
@@ -480,7 +493,7 @@
         label = "MAC";
 		bindings = <
 &trans		&trans   &trans   &trans   &trans   &tips    			              &kp K_VOL_UP   &kp K_PREV   &kp K_PP  &kp K_NEXT    &passpal  &trans
-&trans		&trans   &trans   &trans   &trans   &trans                      &kp K_VOL_DN   &trans  &trans  &kp C_PLAY  &kp RET &trans
+&trans		&trans   &trans   &trans   &trans   &trans                      &kp K_VOL_DN   &trans  &a_pp  &kp C_PLAY  &kp RET &trans
 &trans		&trans   &trans   &trans   &trans   &trans                      &kp C_MEDIA_HOME   &kp MAXWIN     &trans  &trans       &kp RET &trans
 					            &trans     &trans   &trans                      		&trans &trans &trans
 		>;
