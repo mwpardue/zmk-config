@@ -479,8 +479,8 @@
 		    macro_layer {
         label = "MAC";
 		bindings = <
-&trans		&trans   &trans   &trans   &trans   &tips    			              &kp C_VOL_UP   &kp C_PREV   &kp C_PP  &kp C_NEXT    &passpal  &trans
-&trans		&trans   &trans   &trans   &trans   &trans                      &kp C_VOL_DN   &tdmonl  &tdmonm  &tdmonr  &kp RET &trans
+&trans		&trans   &trans   &trans   &trans   &tips    			              &kp K_VOL_UP   &kp K_PREV   &kp K_PP  &kp K_NEXT    &passpal  &trans
+&trans		&trans   &trans   &trans   &trans   &trans                      &kp K_VOL_DN   &tdmonl  &K_PLAY  &C_PLAY  &kp RET &trans
 &trans		&trans   &trans   &trans   &trans   &trans                      &kp C_MEDIA_HOME   &kp MAXWIN     &tdmonbm  &trans       &kp RET &trans
 					            &trans     &trans   &trans                      		&trans &trans &trans
 		>;
