@@ -384,26 +384,6 @@
                 ;
           };
 
-        passpal: passpal {
-            label = "Password Palette";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <20>;
-            tap-ms = <30>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_press &kp LALT>
-                , <&macro_press &kp LSFT>
-                , <&macro_press &kp LCTRL>
-                , <&macro_tap &kp P> 
-                , <&macro_release &kp LGUI>
-                , <&macro_release &kp LALT>
-                , <&macro_release &kp LSFT>
-                , <&macro_release &kp LCTRL>
-                , <&macro_tap &sk LCTRL>
-                ;
-          };
-
         };
 
         combos {
