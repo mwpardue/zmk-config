@@ -391,9 +391,9 @@
             wait-ms = <20>;
             tap-ms = <30>;
             bindings
-                = <&macro_tap &kp BT_SEL 1>
+                = <&macro_tap &bt BT_SEL 1>
                 , <&macro_tap &kp K_PP>
-                , <&macro_tap &kp BT_SEL 0>
+                , <&macro_tap &bt BT_SEL 0>
                 ;
           };
 
