@@ -424,7 +424,7 @@
 
           combo_pass {
               timeout-ms = <50>;
-              key-positions = <9 10 39>;
+              key-positions = <13 14 37>;
               bindings = <&pass>;
           };
         };
