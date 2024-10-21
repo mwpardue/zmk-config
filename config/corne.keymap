@@ -26,9 +26,10 @@
 #define MAXWIN LG(LC(LA(LS(M))))
 #define MEH LC(LS(LALT))
 #define num 1
-#define nav 2
-#define fun 3
-#define mac 4
+#define sym 2
+#define nav 3
+#define fun 4
+#define mac 5
 #define RIGHT_ALPHAS 1 2 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 37 39 40 41
 #define LEFT_ALPHAS 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38
 
