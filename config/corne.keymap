@@ -440,7 +440,7 @@
 &trans		&kp Q       &kp W        &kp F        &kp P        &kp B 			                    &kp J        &kp L        &kp U        &kp Y        &kp QUOT          &trans 
 &trans		&lhm LCTRL A &lhm LALT R &lshm LSHFT S &lhm LGUI T  &kp G                          &kp M        &rshm RGUI N  &rhm RSHFT E &rhm RALT I &rhm RCTRL O &trans
 &trans		&lhm LSHFT Z  &kp X        &kp C        &kp D        &kp V			                    &kp K        &kp H        &kp CMMA     &kp DOT      &rhm RSHFT SLASH &trans
-          				                &kp ESC &lth num TAB &lth nav BSPC                        &ltt sym SPACE &kp RET     &lth fun ESC
+          				                &kp ESC &lth nav BSPC &lth num TAB                        &kp RET &ltt sym SPACE     &lth fun ESC
 		>;
 		};
 
